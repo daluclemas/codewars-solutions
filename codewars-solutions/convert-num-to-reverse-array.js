@@ -21,3 +21,4 @@ function digitize(n) {
 // convert the string to an array
 // return a new array with the items converted to numbers
 // return the new array in reverse order.
+
