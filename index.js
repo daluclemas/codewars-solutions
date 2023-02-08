@@ -21,3 +21,21 @@ function solution(string) {
   })
   return string.join('')
 }
+
+let str = "25";
+
+console.log(str[0] * str[1])
+
+function persistence(num) {
+  num = num.toString();
+  let count = 0;
+
+    while(num.length > 1){
+      count++;
+        num = num.split('').map(Number).reduce((a,b)=>a*b).toString()
+    }
+
+  return {count, num};
+}
+
+console.log(persistence(1233))
