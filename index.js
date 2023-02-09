@@ -39,3 +39,23 @@ function persistence(num) {
 }
 
 console.log(persistence(1233))
+
+function longest(s1, s2) {
+  // your code
+  let newSortedArr = (s1 + s2).split('').sort();
+
+  let set = new Set(newSortedArr);
+
+let str = ''
+
+  set.forEach(item=>{
+    str+= item
+  })
+
+  return str
+  
+  
+  
+}
+
+console.log(longest('xyaabbbccccdefww', 'abcdefklmopqwxy'));
