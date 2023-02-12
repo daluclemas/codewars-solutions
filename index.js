@@ -90,4 +90,37 @@ function expandedForm(num) {
 
 }
 
-console.log(expandedForm(70304))
+function getSum(a, b)
+{
+   //Good luck!
+  let sum = 0 ;
+   if(a === b){
+      sum += a;
+    return sum ;
+    }
+
+  if(b < a){
+    for(let i = b; i <= a; i++){  
+    sum+=i
+    }
+
+  }else{
+    
+  for(let i = a; i <= b; i++){  
+    sum+=i
+  }  
+  }
+  return sum;
+}
+
+console.log(getSum(2,2))
+
+// if(a < b){
+//     for(;a <= b; a++){
+//       sum+=a
+//     }
+//   }else{
+//     for(;a <= b; a++){
+//       sum+=a
+//     }
+//   }
