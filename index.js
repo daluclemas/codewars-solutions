@@ -124,3 +124,20 @@ console.log(getSum(2,2))
 //       sum+=a
 //     }
 //   }
+
+function sumArray(array) {
+
+//   sort array 
+//   pop the last item
+//   shift the first item
+//   return sum
+  
+  let sortedArray = array.sort((a,b)=>a-b);
+  
+  sortedArray.pop();
+  sortedArray.shift()
+  console.log(sortedArray)
+  
+}
+
+sumArray([3])
