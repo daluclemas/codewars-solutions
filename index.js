@@ -165,4 +165,28 @@ return {encodedStr};
 
 }
 
-  console.log(rot13('Tset!'))
+
+function XO(str) {
+    //code here
+  let xCount = 0;
+  let oCount = 0;
+  
+  str.toLowerCase().split('').forEach(item=>{
+    if(item === 'x'){
+      xCount+=1;
+    }else if(item === 'o'){
+      oCount+=1;
+    }
+  })
+
+  if(xCount === oCount){
+
+    return true
+  }else{
+    return false
+  }
+
+ 
+}
+
+console.log(XO('ooxxX'))
