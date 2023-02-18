@@ -189,4 +189,18 @@ function XO(str) {
  
 }
 
-console.log(XO('ooxxX'))
+function getCount(str) {
+  
+  let count = 0;
+  
+  let regex = /[aeiou]/gi;
+  str.split('').forEach(item=>{
+  if(item.match(regex)){
+    count+=1
+  }
+  })
+ 
+  return count;
+}
+
+console.log(getCount('adaeoi'))
