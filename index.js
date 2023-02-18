@@ -141,3 +141,17 @@ function sumArray(array) {
 }
 
 sumArray([3])
+console.log('rot13 ////////')
+
+function rot13(message){
+
+  let alph = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  
+  let cipher = 'nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM';
+  
+  return message.replace(/[a-zA-Z]/gi, letter => cipher[alph.indexOf(letter)])
+
+
+}
+
+  console.log(rot13('Tset!'))
