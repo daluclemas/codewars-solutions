@@ -31,7 +31,7 @@ function rot13(message){
  return message.replace(/[a-zA-Z]/gi, letter => cipher[alphabets.indexOf(letter)])
 }
 
-function rot13c(message) {
+function rot13(message) {
   const alphabet = {
     a: 'n',
     b: 'o',

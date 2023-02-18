@@ -149,8 +149,19 @@ function rot13(message){
   
   let cipher = 'nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM';
   
-  return message.replace(/[a-zA-Z]/gi, letter => cipher[alph.indexOf(letter)])
 
+let encodedStr = '',reg = /[a-zA-Z]/gi;
+
+  message.split('').forEach(item=>{
+    
+    if(alph.indexOf(item) === -1){
+     encodedStr += item 
+      
+    }
+    encodedStr += cipher[alph.indexOf(item)] 
+  })
+
+return {encodedStr};
 
 }
 
