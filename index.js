@@ -221,3 +221,27 @@ console.log(countBy(1,10) )
 console.log(countBy(2,5))
 
 // === [2,4,6,8,10]
+
+function DNAStrand(dna){
+  //your code here
+let dnaArr = dna.split('');
+  let complement = {
+    A:"T",
+  T:"A",
+    C:"G",
+    G:'C'
+  }
+
+  let mapArr = dnaArr.map((letter, index,arr)=>{
+    if(arr.includes(letter)){
+      letter = complement[`${letter}`]
+    }
+
+    return letter
+  })
+
+  console.log(mapArr)
+  
+}
+
+DNAStrand("CATA" )
