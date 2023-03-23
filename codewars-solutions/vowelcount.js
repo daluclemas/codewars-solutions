@@ -17,3 +17,4 @@ function getCount(str) {
  
   return count;
 }
+
