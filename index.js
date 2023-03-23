@@ -245,3 +245,14 @@ let dnaArr = dna.split('');
 }
 
 DNAStrand("CATA" )
+
+function repeatStr (n, s) {
+  
+  let str = '';
+  for(let i = 1; i <= n; i++){
+    str+=s
+  }
+  return str;
+}
+
+    console.log(repeatStr(6, "I" ))
