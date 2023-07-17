@@ -1,258 +1,261 @@
-// better solution to convert the num to reverse array
+// // better solution to convert the num to reverse array
 
-function digitize(n) {
-  return String(n).split('').reverse().map(Number)
-}
+// function digitize(n) {
+//   return String(n).split('').reverse().map(Number)
+// }
 
-console.log(digitize(9865))
+// console.log(digitize(9865))
 
-const arr = ["1", "3"];
+// const arr = ["1", "3"];
 
-const maparr = arr.map(Number)
-console.log(maparr)
+// const maparr = arr.map(Number)
+// console.log(maparr)
 
-// break a camel case
-function solution(string) {
-  string = string.split('').map(function(el) {
-    if (el === el.toUpperCase()) {
-      el = ' ' + el
-    }
-    return el
-  })
-  return string.join('')
-}
-
-let str = "25";
-
-console.log(str[0] * str[1])
-
-function persistence(num) {
-  num = num.toString();
-  let count = 0;
-
-  while (num.length > 1) {
-    count++;
-    num = num.split('').map(Number).reduce((a, b) => a * b).toString()
-  }
-
-  return { count, num };
-}
-
-console.log(persistence(1233))
-
-function longest(s1, s2) {
-  // your code
-  let newSortedArr = (s1 + s2).split('').sort();
-
-  let set = new Set(newSortedArr);
-
-  let str = ''
-
-  set.forEach(item => {
-    str += item
-  })
-
-  return str
-
-
-
-}
-
-console.log(longest('xyaabbbccccdefww', 'abcdefklmopqwxy'));
-
-
-// expandedForm(12); // Should return '10 + 2'
-// expandedForm(42); // Should return '40 + 2'
-// expandedForm(70304); // Should return '70000 + 300 + 4'
-function expandedForm(num) {
-  // Your code here
-  let newArr = [], i = 0,str = '';
-  num = num.toString();
-  let len = num.length-1
-
-  while (i <= num.length) {
-    let t = Number(num[i]) * Math.pow(10,len)
-    newArr.push(t);
-    i++;
-    len--;
-    if (len < 0) {
-      break;
-    }
-  }
-
-  newArr.forEach((item,index,arr)=>{
-    if(item !== 0){
-      str += `${item} +`
-    }
-  })
-
-  return str.slice(0,-3)
-
-}
-
-function getSum(a, b)
-{
-   //Good luck!
-  let sum = 0 ;
-   if(a === b){
-      sum += a;
-    return sum ;
-    }
-
-  if(b < a){
-    for(let i = b; i <= a; i++){  
-    sum+=i
-    }
-
-  }else{
-    
-  for(let i = a; i <= b; i++){  
-    sum+=i
-  }  
-  }
-  return sum;
-}
-
-console.log(getSum(2,2))
-
-// if(a < b){
-//     for(;a <= b; a++){
-//       sum+=a
+// // break a camel case
+// function solution(string) {
+//   string = string.split('').map(function(el) {
+//     if (el === el.toUpperCase()) {
+//       el = ' ' + el
 //     }
-//   }else{
-//     for(;a <= b; a++){
-//       sum+=a
+//     return el
+//   })
+//   return string.join('')
+// }
+
+// let str = "25";
+
+// console.log(str[0] * str[1])
+
+// function persistence(num) {
+//   num = num.toString();
+//   let count = 0;
+
+//   while (num.length > 1) {
+//     count++;
+//     num = num.split('').map(Number).reduce((a, b) => a * b).toString()
+//   }
+
+//   return { count, num };
+// }
+
+// console.log(persistence(1233))
+
+// function longest(s1, s2) {
+//   // your code
+//   let newSortedArr = (s1 + s2).split('').sort();
+
+//   let set = new Set(newSortedArr);
+
+//   let str = ''
+
+//   set.forEach(item => {
+//     str += item
+//   })
+
+//   return str
+
+
+
+// }
+
+// console.log(longest('xyaabbbccccdefww', 'abcdefklmopqwxy'));
+
+
+// // expandedForm(12); // Should return '10 + 2'
+// // expandedForm(42); // Should return '40 + 2'
+// // expandedForm(70304); // Should return '70000 + 300 + 4'
+// function expandedForm(num) {
+//   // Your code here
+//   let newArr = [], i = 0,str = '';
+//   num = num.toString();
+//   let len = num.length-1
+
+//   while (i <= num.length) {
+//     let t = Number(num[i]) * Math.pow(10,len)
+//     newArr.push(t);
+//     i++;
+//     len--;
+//     if (len < 0) {
+//       break;
 //     }
 //   }
 
-function sumArray(array) {
+//   newArr.forEach((item,index,arr)=>{
+//     if(item !== 0){
+//       str += `${item} +`
+//     }
+//   })
 
-//   sort array 
-//   pop the last item
-//   shift the first item
-//   return sum
-  
-  let sortedArray = array.sort((a,b)=>a-b);
-  
-  sortedArray.pop();
-  sortedArray.shift()
-  console.log(sortedArray)
-  
-}
+//   return str.slice(0,-3)
 
-sumArray([3])
-console.log('rot13 ////////')
+// }
 
-function rot13(message){
+// function getSum(a, b)
+// {
+//    //Good luck!
+//   let sum = 0 ;
+//    if(a === b){
+//       sum += a;
+//     return sum ;
+//     }
 
-  let alph = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  
-  let cipher = 'nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM';
-  
+//   if(b < a){
+//     for(let i = b; i <= a; i++){  
+//     sum+=i
+//     }
 
-let encodedStr = '',reg = /[a-zA-Z]/gi;
-
-  message.split('').forEach(item=>{
+//   }else{
     
-    if(alph.indexOf(item) === -1){
-     encodedStr += item 
+//   for(let i = a; i <= b; i++){  
+//     sum+=i
+//   }  
+//   }
+//   return sum;
+// }
+
+// console.log(getSum(2,2))
+
+// // if(a < b){
+// //     for(;a <= b; a++){
+// //       sum+=a
+// //     }
+// //   }else{
+// //     for(;a <= b; a++){
+// //       sum+=a
+// //     }
+// //   }
+
+// function sumArray(array) {
+
+// //   sort array 
+// //   pop the last item
+// //   shift the first item
+// //   return sum
+  
+//   let sortedArray = array.sort((a,b)=>a-b);
+  
+//   sortedArray.pop();
+//   sortedArray.shift()
+//   console.log(sortedArray)
+  
+// }
+
+// sumArray([3])
+// console.log('rot13 ////////')
+
+// function rot13(message){
+
+//   let alph = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  
+//   let cipher = 'nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM';
+  
+
+// let encodedStr = '',reg = /[a-zA-Z]/gi;
+
+//   message.split('').forEach(item=>{
+    
+//     if(alph.indexOf(item) === -1){
+//      encodedStr += item 
       
-    }
-    encodedStr += cipher[alph.indexOf(item)] 
-  })
+//     }
+//     encodedStr += cipher[alph.indexOf(item)] 
+//   })
 
-return {encodedStr};
+// return {encodedStr};
 
-}
+// }
 
 
-function XO(str) {
-    //code here
-  let xCount = 0;
-  let oCount = 0;
+// function XO(str) {
+//     //code here
+//   let xCount = 0;
+//   let oCount = 0;
   
-  str.toLowerCase().split('').forEach(item=>{
-    if(item === 'x'){
-      xCount+=1;
-    }else if(item === 'o'){
-      oCount+=1;
-    }
-  })
+//   str.toLowerCase().split('').forEach(item=>{
+//     if(item === 'x'){
+//       xCount+=1;
+//     }else if(item === 'o'){
+//       oCount+=1;
+//     }
+//   })
 
-  if(xCount === oCount){
+//   if(xCount === oCount){
 
-    return true
-  }else{
-    return false
-  }
+//     return true
+//   }else{
+//     return false
+//   }
 
  
-}
+// }
 
-function getCount(str) {
+// function getCount(str) {
   
-  let count = 0;
+//   let count = 0;
   
-  let regex = /[aeiou]/gi;
-  str.split('').forEach(item=>{
-  if(item.match(regex)){
-    count+=1
-  }
-  })
+//   let regex = /[aeiou]/gi;
+//   str.split('').forEach(item=>{
+//   if(item.match(regex)){
+//     count+=1
+//   }
+//   })
  
-  return count;
-}
+//   return count;
+// }
 
-console.log(getCount('adaeoi'))
+// console.log(getCount('adaeoi'))
 
-      function countBy(x, n) {
-  let z = [];
+//       function countBy(x, n) {
+//   let z = [];
 
-        for(let i = 1; i <= n; i++){
-          z.push(x * i)
-        }
+//         for(let i = 1; i <= n; i++){
+//           z.push(x * i)
+//         }
   
 
-  return z;
-}
+//   return z;
+// }
 
-console.log(countBy(1,10) )
-  // === [1,2,3,4,5,6,7,8,9,10]
-console.log(countBy(2,5))
+// console.log(countBy(1,10) )
+//   // === [1,2,3,4,5,6,7,8,9,10]
+// console.log(countBy(2,5))
 
-// === [2,4,6,8,10]
+// // === [2,4,6,8,10]
 
-function DNAStrand(dna){
-  //your code here
-let dnaArr = dna.split('');
-  let complement = {
-    A:"T",
-  T:"A",
-    C:"G",
-    G:'C'
-  }
+// function DNAStrand(dna){
+//   //your code here
+// let dnaArr = dna.split('');
+//   let complement = {
+//     A:"T",
+//   T:"A",
+//     C:"G",
+//     G:'C'
+//   }
 
-  let mapArr = dnaArr.map((letter, index,arr)=>{
-    if(arr.includes(letter)){
-      letter = complement[`${letter}`]
-    }
+//   let mapArr = dnaArr.map((letter, index,arr)=>{
+//     if(arr.includes(letter)){
+//       letter = complement[`${letter}`]
+//     }
 
-    return letter
-  })
+//     return letter
+//   })
 
-  console.log(mapArr)
+//   console.log(mapArr)
   
-}
+// }
 
-DNAStrand("CATA" )
+// DNAStrand("CATA" )
 
-function repeatStr (n, s) {
+// function repeatStr (n, s) {
   
-  let str = '';
-  for(let i = 1; i <= n; i++){
-    str+=s
-  }
-  return str;
-}
+//   let str = '';
+//   for(let i = 1; i <= n; i++){
+//     str+=s
+//   }
+//   return str;
+// }
 
-    console.log(repeatStr(6, "I" ))
+//     console.log(repeatStr(6, "I" ))
+
+
+console.log(this)
