@@ -257,5 +257,5 @@
 
 //     console.log(repeatStr(6, "I" ))
 
-
-console.log(this)
+var hane = 000
+console.log(this.hane)
