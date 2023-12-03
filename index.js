@@ -257,5 +257,13 @@
 
 //     console.log(repeatStr(6, "I" ))
 
-var hane = 000
-console.log(this.hane)
+// var hane = 000
+// console.log(this.hane)
+
+// function d(arr){
+//   let sumOfPeopleThatGotOn = arr.map((item) => item[0]).reduce((initial,current)=>initial + current)
+
+//   console.log(sumOfPeopleThatGotOn)
+// }
+
+// d([[3,0],[9,1],[4,10],[12,2],[6,1],[7,10]])
