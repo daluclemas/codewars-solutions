@@ -268,3 +268,36 @@
 
 // d([[3,0],[9,1],[4,10],[12,2],[6,1],[7,10]])
 
+function domain(url){
+  let urlArr = url.split("//");
+
+  // const domainName = urlArr.map(item=>{
+    
+  // })
+
+  // const regex = /^www\.[a-zA-Z0-9-]+\.[a-zA-Z]{2,}|[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$/gi
+//   const reg = /^(?:www\.)?([a-zA-Z0-9-]+\.[a-zA-Z]{2,})/gi
+
+//   let newArr = urlArr.filter((item)=>{
+//     return item.match(reg)
+//   })
+
+//   console.log("$$",newArr)
+
+//   let f = newArr[0].replace(/^(?:www\.)?([a-zA-Z0-9-]+)(\.[a-zA-Z]{2,})/gi, "$1");
+
+//   if(f.includes('/')){
+//     f = f.split('/')[0]
+//   }
+
+//   console.log("f---", f)
+
+//   // const domainName = urlArr[1].match(reg);
+
+//   // console.log(domainName[0].replace(/^(?:www\.)?([a-zA-Z0-9-]+)\.[a-zA-Z]{2,}/gi, "$1"))
+// }
+
+// // domain("http://github.com/carbonfive/raygun");
+// // domain("http://www.zombie-bites.com");
+// // domain("https://www.cnet.com");
+// domain("http://google.co.jp");
